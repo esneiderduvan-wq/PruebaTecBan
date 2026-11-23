@@ -35,21 +35,17 @@ public class AdjuntoService {
         Oferta oferta = ofertaRepository.findById(ofertaId)
                 .orElseThrow(() -> new ResourceNotFoundException("Oferta no encontrada: " + ofertaId));
 
-        // Crear directorio si no existe
         Path uploadPath = Paths.get(UPLOAD_DIR);
         if (!Files.exists(uploadPath)) {
             Files.createDirectories(uploadPath);
         }
 
-        // Sanitizar nombre de archivo
         String originalFilename = StringUtils.cleanPath(file.getOriginalFilename() != null ? file.getOriginalFilename() : "archivo");
         String sanitizedFilename = System.currentTimeMillis() + "_" + originalFilename.replaceAll("[^a-zA-Z0-9.-]", "_");
         
-        // Guardar archivo
         Path filePath = uploadPath.resolve(sanitizedFilename);
         Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-        // Crear registro en base de datos
         Adjunto adjunto = Adjunto.builder()
                 .oferta(oferta)
                 .nombreArchivo(originalFilename)

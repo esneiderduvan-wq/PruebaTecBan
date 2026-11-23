@@ -97,7 +97,6 @@ public class OfertaService {
         BigDecimal valorTotal = BigDecimal.ZERO;
         List<BigDecimal> valoresOferentes = new ArrayList<>();
 
-        // Primero calcular el valor total de la oferta sumando todos los pagos de todos los oferentes
         for (OferenteRequest oferenteReq : request.getOferentes()) {
             if (oferenteReq.getPagos().size() > 6) {
                 throw new BusinessException("Máximo 6 pagos por oferente");
@@ -115,11 +114,9 @@ public class OfertaService {
             throw new BusinessException("El valor total de la oferta debe ser mayor a 0");
         }
 
-        // Ahora crear los oferentes calculando su porcentaje automáticamente
         int i = 0;
         for (OferenteRequest oferenteReq : request.getOferentes()) {
             BigDecimal valorOferente = valoresOferentes.get(i);
-            // Calcular porcentaje: (valorOferente / valorTotal) * 100
             BigDecimal porcentaje = valorOferente.multiply(new BigDecimal("100"))
                     .divide(valorTotal, 2, RoundingMode.HALF_UP);
 
@@ -228,7 +225,6 @@ public class OfertaService {
             throw new BusinessException("No tiene permisos para rechazar esta oferta en su estado actual");
         }
 
-        // Liberar el BRP para que pueda recibir nuevas ofertas
         oferta.getBrp().setEstado(EstadoBrp.DISPONIBLE);
 
         oferta.setEstado(EstadoOferta.RECHAZADO);

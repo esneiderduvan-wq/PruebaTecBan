@@ -179,7 +179,6 @@ public class UsuarioService {
 
         usuarioModuloRepository.save(usuarioModulo);
 
-        // Registrar auditoría
         registrarAuditoria(usuarioId, moduloNombre, "ASIGNADO", asignadoPor);
 
         log.info("Módulo {} asignado a usuario {} por usuario ID: {}", moduloNombre, usuario.getUsername(), asignadoPor);
@@ -206,7 +205,6 @@ public class UsuarioService {
 
         usuarioModuloRepository.deleteByUsuarioIdAndModuloId(usuarioId, modulo.getId());
 
-        // Registrar auditoría - obtener quién hizo la operación del contexto de seguridad
         Long asignadoPor = getCurrentUserId();
         registrarAuditoria(usuarioId, moduloNombre, "REMOVIDO", asignadoPor);
 

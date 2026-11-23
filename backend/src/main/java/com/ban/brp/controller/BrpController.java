@@ -22,7 +22,6 @@ public class BrpController {
     @PreAuthorize("hasAnyRole('ADMINISTRADOR', 'JEFE', 'ANALISTA', 'RADICADOR')")
     public ResponseEntity<List<BrpResponse>> findAll(
             @RequestHeader(value = "X-Rol", required = false) String rol) {
-        // RADICADOR solo ve disponibles
         if ("RADICADOR".equals(rol)) {
             return ResponseEntity.ok(brpService.findAllDisponibles());
         }

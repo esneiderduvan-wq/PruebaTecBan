@@ -13,7 +13,6 @@ public class UsuarioRequest {
     @Size(min = 3, max = 50, message = "Entre 3 y 50 caracteres")
     private String username;
 
-    // Password solo requerido en creación, no en edición
     @Size(min = 6, max = 100, message = "Mínimo 6 caracteres")
     private String password;
 

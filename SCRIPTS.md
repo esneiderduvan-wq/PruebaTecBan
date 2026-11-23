@@ -57,7 +57,6 @@ curl -X POST http://localhost:8080/api/ofertas \
         "tipoIdentificacion": "CC",
         "numeroIdentificacion": "12345678",
         "nombre": "Juan Pérez",
-        "porcentajeParticipacion": 100.00,
         "email": "juan@email.com",
         "telefono": "3001234567",
         "pagos": [
@@ -71,6 +70,8 @@ curl -X POST http://localhost:8080/api/ofertas \
     ]
   }'
 
+# El porcentaje de participación se calcula automáticamente:
+# (pagoOferente / totalPagos) * 100
 # Guardar el ID de la oferta, ej: 1
 OFERTA_ID=1
 ```
@@ -161,7 +162,7 @@ curl -X POST http://localhost:8080/api/ofertas \
   -H "Content-Type: application/json" \
   -d '{
     "brpCodigo": "BRP-0002",
-    "oferentes": [{"tipoIdentificacion":"CC","numeroIdentificacion":"87654321","nombre":"María","porcentajeParticipacion":100.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":500000000}]}]
+    "oferentes": [{"tipoIdentificacion":"CC","numeroIdentificacion":"87654321","nombre":"María","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":500000000}]}]
   }'
 
 # Intentar tomar (debería fallar)
@@ -179,8 +180,8 @@ curl -X POST http://localhost:8080/api/ofertas \
   -H "Authorization: Bearer $TOKEN_RAD" \
   -H "Content-Type: application/json" \
   -d '{
-    "brpCodigo": "BRP-0012",  # Este está en estado DADO_DE_BAJA
-    "oferentes": [{"tipoIdentificacion":"CC","numeroIdentificacion":"111222333","nombre":"Pedro","porcentajeParticipacion":100.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":200000000}]}]
+    "brpCodigo": "BRP-0012",
+    "oferentes": [{"tipoIdentificacion":"CC","numeroIdentificacion":"111222333","nombre":"Pedro","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":200000000}]}]
   }'
 
 # Respuesta esperada: 409 Conflict - "Solo se puede ofertar sobre BRP en estado DISPONIBLE"
@@ -195,19 +196,19 @@ curl -X POST http://localhost:8080/api/ofertas \
   -d '{
     "brpCodigo": "BRP-0003",
     "oferentes": [
-      {"tipoIdentificacion":"CC","numeroIdentificacion":"1","nombre":"A","porcentajeParticipacion":20.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
-      {"tipoIdentificacion":"CC","numeroIdentificacion":"2","nombre":"B","porcentajeParticipacion":20.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
-      {"tipoIdentificacion":"CC","numeroIdentificacion":"3","nombre":"C","porcentajeParticipacion":20.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
-      {"tipoIdentificacion":"CC","numeroIdentificacion":"4","nombre":"D","porcentajeParticipacion":20.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
-      {"tipoIdentificacion":"CC","numeroIdentificacion":"5","nombre":"E","porcentajeParticipacion":20.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
-      {"tipoIdentificacion":"CC","numeroIdentificacion":"6","nombre":"F","porcentajeParticipacion":20.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]}
+      {"tipoIdentificacion":"CC","numeroIdentificacion":"1","nombre":"A","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
+      {"tipoIdentificacion":"CC","numeroIdentificacion":"2","nombre":"B","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
+      {"tipoIdentificacion":"CC","numeroIdentificacion":"3","nombre":"C","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
+      {"tipoIdentificacion":"CC","numeroIdentificacion":"4","nombre":"D","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
+      {"tipoIdentificacion":"CC","numeroIdentificacion":"5","nombre":"E","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]},
+      {"tipoIdentificacion":"CC","numeroIdentificacion":"6","nombre":"F","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]}
     ]
   }'
 
 # Respuesta esperada: 409 Conflict - "Máximo 5 oferentes por oferta"
 ```
 
-### Escenario 4: Porcentajes no suman 100
+### Escenario 4: Valor total de oferta es 0 o negativo
 
 ```bash
 curl -X POST http://localhost:8080/api/ofertas \
@@ -216,12 +217,26 @@ curl -X POST http://localhost:8080/api/ofertas \
   -d '{
     "brpCodigo": "BRP-0004",
     "oferentes": [
-      {"tipoIdentificacion":"CC","numeroIdentificacion":"1","nombre":"A","porcentajeParticipacion":50.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":50000000}]},
-      {"tipoIdentificacion":"CC","numeroIdentificacion":"2","nombre":"B","porcentajeParticipacion":30.00,"pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":30000000}]}
+      {"tipoIdentificacion":"CC","numeroIdentificacion":"1","nombre":"A","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":0}]}
     ]
   }'
 
-# Respuesta esperada: 409 Conflict - "Los porcentajes de participación deben sumar 100%"
+# Respuesta esperada: 409 Conflict - "El valor total de la oferta debe ser mayor a 0"
+```
+
+### Escenario 5: BRP ya tiene una oferta asociada
+
+```bash
+# BRP-0001 ya tiene la oferta ID=1 del Paso 3
+curl -X POST http://localhost:8080/api/ofertas \
+  -H "Authorization: Bearer $TOKEN_RAD" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "brpCodigo": "BRP-0001",
+    "oferentes": [{"tipoIdentificacion":"CC","numeroIdentificacion":"999","nombre":"Nuevo","pagos":[{"tipoPago":"CONTADO","fecha":"2026-11-20","valor":100000000}]}]
+  }'
+
+# Respuesta esperada: 409 Conflict - "Este BRP ya tiene una oferta asociada"
 ```
 
 ---
@@ -309,3 +324,29 @@ curl http://localhost:8080/api/brp -H "Authorization: Bearer $TOKEN"
 # 5. Listar ofertas
 curl http://localhost:8080/api/ofertas -H "Authorization: Bearer $TOKEN"
 ```
+
+---
+
+## Notas Importantes
+
+1. **Porcentaje de participación**: Se calcula automáticamente según el valor de los pagos de cada oferente. No es necesario enviarlo en el request.
+
+2. **Múltiples pagos por oferente**: Un oferente puede tener hasta 6 pagos (mezcla de CONTADO y PRESTAMO).
+
+3. **Documentos adjuntos**: Al radicar una oferta, se puede adjuntar un documento (PDF, DOC, DOCX, JPG, PNG) que quedará asociado a la oferta.
+
+4. **Filtros por rol**:
+   - RADICADOR: Solo ve sus propias ofertas y BRP en estado DISPONIBLE
+   - ANALISTA: Ve ofertas en estados RADICADO, EN_PROCESO, ESCALADO
+   - JEFE: Solo ve ofertas en estado ESCALADO
+   - ADMINISTRADOR: Ve todo
+
+5. **Transiciones de estado**:
+   ```
+   RADICADO → EN_PROCESO (analista toma)
+   EN_PROCESO → ESCALADO (analista escala)
+   EN_PROCESO → RECHAZADO (analista rechaza, BRP vuelve a DISPONIBLE)
+   ESCALADO → APROBADO (jefe aprueba)
+   ESCALADO → EN_PROCESO (jefe devuelve, con motivo)
+   ESCALADO → RECHAZADO (jefe rechaza, BRP vuelve a DISPONIBLE)
+   ```
