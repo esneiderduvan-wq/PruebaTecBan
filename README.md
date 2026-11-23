@@ -226,7 +226,6 @@ ESCALADO -> EN_PROCESO (jefe devuelve)
 
 ## Archivos de Documentación Adicional
 
-- **OTROS_ARCHIVOS.md** - Explicación de Lombok y MapStruct
 - **SCRIPTS.md** - Guía de prueba del flujo completo
 
 ## Licencia
