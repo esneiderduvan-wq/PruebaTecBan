@@ -1,0 +1,1622 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+<changeSet id='007-1' author='brp'>
+    <!-- BRP-0001 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0001</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>001-554854</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Apartamento de 172 m², 4 alcobas, estrato 6. Diagonal 104 # 22-20, barrio Las Acacias, Medellín.</column>
+        <column name='precio'>320000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-20</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0002 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0002</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>50C-688670</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Casa de 2 pisos y 252 m² construidos, 3 alcobas. Calle 71 # 52-5, barrio San Remo, Bogotá.</column>
+        <column name='precio'>580000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-12</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0003 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0003</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>370-207687</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Local comercial de 190 m² con frente sobre vía principal. Diagonal 120 # 7-58, barrio Monteverde, Cali.</column>
+        <column name='precio'>410000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-06</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0004 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0004</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>040-703342</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Lote urbano de 678 m², uso mixto. Diagonal 28 # 67-18, barrio La Floresta, Barranquilla.</column>
+        <column name='precio'>190000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-08</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0005 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0005</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>50C-206292</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Apartamento de 114 m², 4 alcobas, estrato 6. Transversal 112 # 11-50, barrio Villa Verde, Bogotá.</column>
+        <column name='precio'>450000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-15</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0006 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0006</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>001-554562</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Casa de 2 pisos y 214 m² construidos, 5 alcobas. Transversal 37 # 60-23, barrio Altos del Prado, Medellín.</column>
+        <column name='precio'>275000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-22</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0007 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0007</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>DGH105</column>
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Renault Logan 2020, 142.000 km, color negro. Se encuentra en patios de Cali.</column>
+        <column name='precio'>68000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-25</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0008 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0008</column>
+        <column name='estado'>PENDIENTE_TECNICO</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>FAM966</column>
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Nissan Frontier 2018, 147.000 km, color plata. Se encuentra en patios de Medellín.</column>
+        <column name='precio'>42000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-30</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0009 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0009</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Compactador Dynapac CA250, año 2009, serial SN5705543. Bodega en Barranquilla.</column>
+        <column name='precio'>95000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-24</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0010 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0010</column>
+        <column name='estado'>SIN_PRECIO</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>001-592729</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Local comercial de 79 m² con frente sobre vía principal. Diagonal 38 # 73-35, barrio Monteverde, Medellín.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0011 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0011</column>
+        <column name='estado'>SIN_PRECIO</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>50C-73361</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Lote urbano de 565 m², uso comercial. Calle 56 # 22-14, barrio Monteverde, Bogotá.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0012 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0012</column>
+        <column name='estado'>DADO_DE_BAJA</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>370-987081</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Apartamento de 92 m², 1 alcobas, estrato 6. Avenida 36 # 76-9, barrio Villa Verde, Cali.</column>
+        <column name='precio'>210000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-12</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0013 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0013</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>001-26179</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Itagüí</column>
+        <column name='descripcion'>Lote urbano de 1218 m², uso comercial. Calle 2 # 53-33, barrio El Recreo, Itagüí.</column>
+        <column name='precio'>780000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-06</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0014 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0014</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>50S-991583</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Soacha</column>
+        <column name='descripcion'>Local comercial de 104 m² con frente sobre vía principal. Calle 13 # 88-72, barrio Las Acacias, Soacha.</column>
+        <column name='precio'>720000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-25</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0015 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0015</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>50N-236110</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Chía</column>
+        <column name='descripcion'>Local comercial de 180 m² con frente sobre vía principal. Diagonal 5 # 52-41, barrio Las Acacias, Chía.</column>
+        <column name='precio'>1615000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-01</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0016 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0016</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>KMB853</column>
+        <column name='departamento'>Bolívar</column>
+        <column name='municipio'>Cartagena</column>
+        <column name='descripcion'>Nissan Frontier 2020, 72.000 km, color rojo. Se encuentra en patios de Cartagena.</column>
+        <column name='precio'>121000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-07</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0017 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0017</column>
+        <column name='estado'>PENDIENTE_TECNICO</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>DKP426</column>
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Toyota Hilux 2023, 92.000 km, color negro. Se encuentra en patios de Barranquilla.</column>
+        <column name='precio'>103500000</column>
+        <column name='fecha_asignacion_precio'>2026-10-17</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0018 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0018</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>50C-138644</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Apartamento de 132 m², 2 alcobas, estrato 6. Calle 93 # 15-21, barrio Las Acacias, Bogotá.</column>
+        <column name='precio'>525000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-12</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0019 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0019</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>060-455403</column>
+        <column name='placa' />
+        <column name='departamento'>Bolívar</column>
+        <column name='municipio'>Cartagena</column>
+        <column name='descripcion'>Local comercial de 115 m² con frente sobre vía principal. Diagonal 83 # 84-39, barrio Los Almendros, Cartagena.</column>
+        <column name='precio'>1020000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-15</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0020 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0020</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>001-579300</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Casa de 2 pisos y 276 m² construidos, 3 alcobas. Transversal 85 # 29-17, barrio La Floresta, Medellín.</column>
+        <column name='precio'>725000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-17</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+</changeSet>
+
+<changeSet id='007-2' author='brp'>
+    <!-- BRP-0021 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0021</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>50C-512103</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Apartamento de 146 m², 3 alcobas, estrato 3. Carrera 3 # 3-36, barrio La Pradera, Bogotá.</column>
+        <column name='precio'>765000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-20</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0022 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0022</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>300-869689</column>
+        <column name='placa' />
+        <column name='departamento'>Santander</column>
+        <column name='municipio'>Bucaramanga</column>
+        <column name='descripcion'>Casa de 3 pisos y 150 m² construidos, 2 alcobas. Carrera 71 # 5-84, barrio La Pradera, Bucaramanga.</column>
+        <column name='precio'>540000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-12</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0023 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0023</column>
+        <column name='estado'>PENDIENTE_TECNICO</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>100-242614</column>
+        <column name='placa' />
+        <column name='departamento'>Caldas</column>
+        <column name='municipio'>Manizales</column>
+        <column name='descripcion'>Lote urbano de 1450 m², uso residencial. Calle 81 # 32-61, barrio Los Almendros, Manizales.</column>
+        <column name='precio'>1495000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-11</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0024 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0024</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>060-491577</column>
+        <column name='placa' />
+        <column name='departamento'>Bolívar</column>
+        <column name='municipio'>Cartagena</column>
+        <column name='descripcion'>Apartamento de 137 m², 2 alcobas, estrato 6. Avenida 44 # 26-48, barrio Altos del Prado, Cartagena.</column>
+        <column name='precio'>845000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-30</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0025 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0025</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>290-863282</column>
+        <column name='placa' />
+        <column name='departamento'>Risaralda</column>
+        <column name='municipio'>Pereira</column>
+        <column name='descripcion'>Apartamento de 124 m², 2 alcobas, estrato 3. Transversal 20 # 63-1, barrio Altos del Prado, Pereira.</column>
+        <column name='precio'>870000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-13</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0026 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0026</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>370-154662</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Apartamento de 54 m², 2 alcobas, estrato 2. Avenida 48 # 70-94, barrio Villa Verde, Cali.</column>
+        <column name='precio'>350000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-05</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0027 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0027</column>
+        <column name='estado'>DADO_DE_BAJA</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>50C-610445</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Local comercial de 161 m² con frente sobre vía principal. Carrera 109 # 90-75, barrio Villa Verde, Bogotá.</column>
+        <column name='precio'>705000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-06</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0028 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0028</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>50N-778161</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Chía</column>
+        <column name='descripcion'>Lote urbano de 2357 m², uso mixto. Carrera 66 # 14-11, barrio La Floresta, Chía.</column>
+        <column name='precio'>4790000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-06</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0029 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0029</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>GFK402</column>
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Toyota Hilux 2012, 159.000 km, color plata. Se encuentra en patios de Barranquilla.</column>
+        <column name='precio'>97500000</column>
+        <column name='fecha_asignacion_precio'>2026-07-05</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0030 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0030</column>
+        <column name='estado'>PENDIENTE_TECNICO</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>040-861578</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Soledad</column>
+        <column name='descripcion'>Apartamento de 144 m², 2 alcobas, estrato 2. Diagonal 83 # 62-55, barrio Altos del Prado, Soledad.</column>
+        <column name='precio'>970000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-16</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0031 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0031</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>040-39798</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Casa de 3 pisos y 167 m² construidos, 2 alcobas. Carrera 41 # 70-19, barrio La Floresta, Barranquilla.</column>
+        <column name='precio'>500000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-01</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0032 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0032</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Montacargas Hyster H50, año 2009, serial SN7173957. Bodega en Barranquilla.</column>
+        <column name='precio'>202000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-10</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0033 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0033</column>
+        <column name='estado'>PENDIENTE_TECNICO</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>50S-518103</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Soacha</column>
+        <column name='descripcion'>Local comercial de 178 m² con frente sobre vía principal. Diagonal 32 # 17-14, barrio Altos del Prado, Soacha.</column>
+        <column name='precio'>870000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-19</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0034 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0034</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>DMS610</column>
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Hyundai Accent 2016, 85.000 km, color plata. Se encuentra en patios de Medellín.</column>
+        <column name='precio'>41000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-03</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0035 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0035</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>370-825751</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Apartamento de 136 m², 4 alcobas, estrato 6. Avenida 11 # 9-12, barrio Campo Alegre, Cali.</column>
+        <column name='precio'>655000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-28</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0036 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0036</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>040-348368</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Local comercial de 68 m² con frente sobre vía principal. Avenida 56 # 65-72, barrio Altos del Prado, Barranquilla.</column>
+        <column name='precio'>555000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-16</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0037 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0037</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>MMP951</column>
+        <column name='departamento'>Bolívar</column>
+        <column name='municipio'>Cartagena</column>
+        <column name='descripcion'>Kia Picanto 2019, 64.000 km, color plata. Se encuentra en patios de Cartagena.</column>
+        <column name='precio'>133000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-25</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0038 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0038</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Excavadora Komatsu PC200, año 2015, serial SN3140504. Bodega en Barranquilla.</column>
+        <column name='precio'>272000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-01</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0039 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0039</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>EUX374</column>
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Chía</column>
+        <column name='descripcion'>Nissan Frontier 2016, 121.000 km, color negro. Se encuentra en patios de Chía.</column>
+        <column name='precio'>56500000</column>
+        <column name='fecha_asignacion_precio'>2026-07-07</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0040 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0040</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Caldas</column>
+        <column name='municipio'>Manizales</column>
+        <column name='descripcion'>Minicargador Bobcat S650, año 2012, serial SN5923599. Bodega en Manizales.</column>
+        <column name='precio'>348000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-11</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+</changeSet>
+
+<changeSet id='007-3' author='brp'>
+    <!-- BRP-0041 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0041</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>50C-962675</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Casa de 1 pisos y 284 m² construidos, 4 alcobas. Transversal 44 # 13-87, barrio Campo Alegre, Bogotá.</column>
+        <column name='precio'>1520000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-18</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0042 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0042</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>290-977721</column>
+        <column name='placa' />
+        <column name='departamento'>Risaralda</column>
+        <column name='municipio'>Pereira</column>
+        <column name='descripcion'>Lote urbano de 2266 m², uso residencial. Transversal 46 # 83-43, barrio Los Almendros, Pereira.</column>
+        <column name='precio'>4705000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-03</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0043 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0043</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Planta eléctrica Cummins C150, año 2016, serial SN5230777. Bodega en Bogotá.</column>
+        <column name='precio'>110000000</column>
+        <column name='fecha_asignacion_precio'>2026-11-04</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0044 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0044</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>040-677177</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Apartamento de 151 m², 4 alcobas, estrato 5. Avenida 2 # 5-97, barrio San Remo, Barranquilla.</column>
+        <column name='precio'>605000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-08</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0045 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0045</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>378-397379</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Palmira</column>
+        <column name='descripcion'>Casa de 1 pisos y 247 m² construidos, 3 alcobas. Transversal 66 # 36-80, barrio Monteverde, Palmira.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0046 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0046</column>
+        <column name='estado'>DADO_DE_BAJA</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>290-173396</column>
+        <column name='placa' />
+        <column name='departamento'>Risaralda</column>
+        <column name='municipio'>Pereira</column>
+        <column name='descripcion'>Lote urbano de 2426 m², uso mixto. Carrera 69 # 99-2, barrio El Mirador, Pereira.</column>
+        <column name='precio'>4330000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-27</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0047 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0047</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>50S-98376</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Soacha</column>
+        <column name='descripcion'>Local comercial de 77 m² con frente sobre vía principal. Diagonal 87 # 22-91, barrio Villa Verde, Soacha.</column>
+        <column name='precio'>675000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-12</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0048 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0048</column>
+        <column name='estado'>DADO_DE_BAJA</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>300-779917</column>
+        <column name='placa' />
+        <column name='departamento'>Santander</column>
+        <column name='municipio'>Bucaramanga</column>
+        <column name='descripcion'>Casa de 1 pisos y 148 m² construidos, 2 alcobas. Avenida 54 # 6-24, barrio La Pradera, Bucaramanga.</column>
+        <column name='precio'>690000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-29</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0049 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0049</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>370-512993</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Local comercial de 193 m² con frente sobre vía principal. Avenida 44 # 45-41, barrio Las Acacias, Cali.</column>
+        <column name='precio'>1185000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-23</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0050 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0050</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>50C-887151</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Casa de 1 pisos y 208 m² construidos, 5 alcobas. Carrera 3 # 62-47, barrio Villa Verde, Bogotá.</column>
+        <column name='precio'>925000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-10</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0051 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0051</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>060-914851</column>
+        <column name='placa' />
+        <column name='departamento'>Bolívar</column>
+        <column name='municipio'>Cartagena</column>
+        <column name='descripcion'>Casa de 3 pisos y 342 m² construidos, 5 alcobas. Avenida 28 # 75-7, barrio El Recreo, Cartagena.</column>
+        <column name='precio'>950000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-09</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0052 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0052</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Planta eléctrica Cummins C150, año 2015, serial SN2522000. Bodega en Bogotá.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0053 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0053</column>
+        <column name='estado'>PENDIENTE_TECNICO</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>300-91860</column>
+        <column name='placa' />
+        <column name='departamento'>Santander</column>
+        <column name='municipio'>Bucaramanga</column>
+        <column name='descripcion'>Apartamento de 178 m², 3 alcobas, estrato 5. Avenida 85 # 44-47, barrio La Floresta, Bucaramanga.</column>
+        <column name='precio'>1045000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-15</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0054 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0054</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>XDW319</column>
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Toyota Hilux 2020, 141.000 km, color rojo. Se encuentra en patios de Medellín.</column>
+        <column name='precio'>29000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-24</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0055 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0055</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>040-231541</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Local comercial de 134 m² con frente sobre vía principal. Diagonal 110 # 68-17, barrio La Pradera, Barranquilla.</column>
+        <column name='precio'>840000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-04</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0056 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0056</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>001-208236</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Itagüí</column>
+        <column name='descripcion'>Apartamento de 79 m², 3 alcobas, estrato 4. Transversal 69 # 79-93, barrio La Pradera, Itagüí.</column>
+        <column name='precio'>325000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-10</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0057 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0057</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>060-290555</column>
+        <column name='placa' />
+        <column name='departamento'>Bolívar</column>
+        <column name='municipio'>Cartagena</column>
+        <column name='descripcion'>Casa de 1 pisos y 153 m² construidos, 2 alcobas. Calle 36 # 39-23, barrio La Floresta, Cartagena.</column>
+        <column name='precio'>730000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-03</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0058 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0058</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>BFY257</column>
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Rionegro</column>
+        <column name='descripcion'>Chevrolet Onix 2014, 55.000 km, color plata. Se encuentra en patios de Rionegro.</column>
+        <column name='precio'>80500000</column>
+        <column name='fecha_asignacion_precio'>2026-10-04</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0059 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0059</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>50C-723445</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Apartamento de 52 m², 3 alcobas, estrato 3. Diagonal 47 # 70-12, barrio Campo Alegre, Bogotá.</column>
+        <column name='precio'>345000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-23</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0060 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0060</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>001-624475</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Casa de 3 pisos y 154 m² construidos, 2 alcobas. Transversal 1 # 8-13, barrio Altos del Prado, Medellín.</column>
+        <column name='precio'>840000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-05</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+</changeSet>
+
+<changeSet id='007-4' author='brp'>
+    <!-- BRP-0061 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0061</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>001-464171</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Casa de 1 pisos y 248 m² construidos, 3 alcobas. Diagonal 25 # 12-55, barrio Monteverde, Medellín.</column>
+        <column name='precio'>825000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-14</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0062 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0062</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>001-766138</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Itagüí</column>
+        <column name='descripcion'>Apartamento de 106 m², 2 alcobas, estrato 5. Carrera 48 # 21-69, barrio El Recreo, Itagüí.</column>
+        <column name='precio'>560000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-01</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0063 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0063</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>50C-784952</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Apartamento de 98 m², 3 alcobas, estrato 5. Diagonal 78 # 62-12, barrio San Remo, Bogotá.</column>
+        <column name='precio'>425000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-21</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0064 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0064</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>370-223456</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Jamundí</column>
+        <column name='descripcion'>Local comercial de 115 m² con frente sobre vía principal. Diagonal 89 # 21-15, barrio La Floresta, Jamundí.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0065 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0065</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>370-311063</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Apartamento de 93 m², 4 alcobas, estrato 2. Diagonal 19 # 83-82, barrio Villa Verde, Cali.</column>
+        <column name='precio'>615000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-03</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0066 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0066</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>MSE210</column>
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Chevrolet Onix 2020, 125.000 km, color negro. Se encuentra en patios de Medellín.</column>
+        <column name='precio'>131500000</column>
+        <column name='fecha_asignacion_precio'>2026-07-27</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0067 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0067</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>50S-712568</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Soacha</column>
+        <column name='descripcion'>Casa de 2 pisos y 263 m² construidos, 5 alcobas. Diagonal 82 # 76-7, barrio Prados del Norte, Soacha.</column>
+        <column name='precio'>1275000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-05</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0068 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0068</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>001-876074</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Itagüí</column>
+        <column name='descripcion'>Local comercial de 199 m² con frente sobre vía principal. Calle 60 # 60-45, barrio La Pradera, Itagüí.</column>
+        <column name='precio'>1675000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-26</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0069 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0069</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>290-977375</column>
+        <column name='placa' />
+        <column name='departamento'>Risaralda</column>
+        <column name='municipio'>Pereira</column>
+        <column name='descripcion'>Casa de 2 pisos y 221 m² construidos, 2 alcobas. Calle 76 # 6-9, barrio La Pradera, Pereira.</column>
+        <column name='precio'>970000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-07</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0070 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0070</column>
+        <column name='estado'>PENDIENTE_TECNICO</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>300-33033</column>
+        <column name='placa' />
+        <column name='departamento'>Santander</column>
+        <column name='municipio'>Bucaramanga</column>
+        <column name='descripcion'>Local comercial de 190 m² con frente sobre vía principal. Diagonal 59 # 79-62, barrio La Pradera, Bucaramanga.</column>
+        <column name='precio'>1005000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-05</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>10</column>
+    </insert>
+    <!-- BRP-0071 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0071</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>50N-29121</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Chía</column>
+        <column name='descripcion'>Lote urbano de 258 m², uso residencial. Transversal 12 # 22-69, barrio Villa Verde, Chía.</column>
+        <column name='precio'>155000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-19</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0072 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0072</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>290-761791</column>
+        <column name='placa' />
+        <column name='departamento'>Risaralda</column>
+        <column name='municipio'>Pereira</column>
+        <column name='descripcion'>Casa de 1 pisos y 346 m² construidos, 4 alcobas. Carrera 40 # 61-31, barrio Altos del Prado, Pereira.</column>
+        <column name='precio'>1545000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-11</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0073 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0073</column>
+        <column name='estado'>SIN_PRECIO</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>001-469824</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Itagüí</column>
+        <column name='descripcion'>Apartamento de 106 m², 3 alcobas, estrato 5. Calle 63 # 32-77, barrio La Floresta, Itagüí.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0074 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0074</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>040-533192</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Casa de 3 pisos y 138 m² construidos, 5 alcobas. Diagonal 49 # 62-68, barrio Los Almendros, Barranquilla.</column>
+        <column name='precio'>470000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-09</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0075 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0075</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Compresor Atlas Copco GA55, año 2020, serial SN3353643. Bodega en Medellín.</column>
+        <column name='precio'>198000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-12</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0076 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0076</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Rionegro</column>
+        <column name='descripcion'>Montacargas Hyster H50, año 2012, serial SN8242884. Bodega en Rionegro.</column>
+        <column name='precio'>435000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-30</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0077 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0077</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>DVM925</column>
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Chía</column>
+        <column name='descripcion'>Suzuki Swift 2020, 50.000 km, color azul. Se encuentra en patios de Chía.</column>
+        <column name='precio'>54000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-20</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0078 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0078</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>370-16051</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Apartamento de 88 m², 4 alcobas, estrato 5. Calle 103 # 14-54, barrio El Recreo, Cali.</column>
+        <column name='precio'>400000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-07</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0079 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0079</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>040-185773</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Lote urbano de 842 m², uso mixto. Avenida 117 # 48-11, barrio Villa Verde, Barranquilla.</column>
+        <column name='precio'>465000000</column>
+        <column name='fecha_asignacion_precio'>2026-11-09</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0080 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0080</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>50C-671106</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Apartamento de 74 m², 4 alcobas, estrato 6. Calle 46 # 89-60, barrio La Pradera, Bogotá.</column>
+        <column name='precio'>550000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-19</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+</changeSet>
+
+<changeSet id='007-5' author='brp'>
+    <!-- BRP-0081 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0081</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>001-224538</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Casa de 1 pisos y 326 m² construidos, 4 alcobas. Calle 22 # 84-9, barrio Villa Verde, Medellín.</column>
+        <column name='precio'>825000000</column>
+        <column name='fecha_asignacion_precio'>2026-11-13</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0082 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0082</column>
+        <column name='estado'>SIN_PRECIO</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>040-185737</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Soledad</column>
+        <column name='descripcion'>Apartamento de 56 m², 4 alcobas, estrato 4. Calle 114 # 90-94, barrio La Pradera, Soledad.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0083 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0083</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>020-422069</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Rionegro</column>
+        <column name='descripcion'>Apartamento de 177 m², 2 alcobas, estrato 5. Calle 70 # 46-30, barrio La Pradera, Rionegro.</column>
+        <column name='precio'>965000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-09</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0084 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0084</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>001-197139</column>
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Envigado</column>
+        <column name='descripcion'>Apartamento de 48 m², 4 alcobas, estrato 5. Diagonal 12 # 57-87, barrio Las Acacias, Envigado.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0085 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0085</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>370-687527</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Casa de 1 pisos y 201 m² construidos, 3 alcobas. Diagonal 97 # 44-52, barrio Villa Verde, Cali.</column>
+        <column name='precio'>1055000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-24</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0086 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0086</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>50C-914579</column>
+        <column name='placa' />
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Bogotá</column>
+        <column name='descripcion'>Lote urbano de 227 m², uso comercial. Calle 96 # 97-17, barrio Las Acacias, Bogotá.</column>
+        <column name='precio'>320000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-30</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0087 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0087</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>060-155423</column>
+        <column name='placa' />
+        <column name='departamento'>Bolívar</column>
+        <column name='municipio'>Cartagena</column>
+        <column name='descripcion'>Lote urbano de 760 m², uso mixto. Avenida 23 # 64-71, barrio El Mirador, Cartagena.</column>
+        <column name='precio'>310000000</column>
+        <column name='fecha_asignacion_precio'>2026-06-23</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0088 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0088</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>VLT464</column>
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Chevrolet Onix 2022, 115.000 km, color plata. Se encuentra en patios de Cali.</column>
+        <column name='precio'>36000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-30</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0089 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0089</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>DNH411</column>
+        <column name='departamento'>Risaralda</column>
+        <column name='municipio'>Pereira</column>
+        <column name='descripcion'>Chevrolet Spark GT 2022, 72.000 km, color gris. Se encuentra en patios de Pereira.</column>
+        <column name='precio'>105000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-24</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0090 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0090</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>LOTE</column>
+        <column name='matricula_inmobiliaria'>370-194046</column>
+        <column name='placa' />
+        <column name='departamento'>Valle del Cauca</column>
+        <column name='municipio'>Cali</column>
+        <column name='descripcion'>Lote urbano de 885 m², uso comercial. Diagonal 2 # 4-44, barrio Prados del Norte, Cali.</column>
+        <column name='precio'>2055000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-02</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0091 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0091</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>SDC230</column>
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Chevrolet Onix 2014, 136.000 km, color plata. Se encuentra en patios de Medellín.</column>
+        <column name='precio'>25500000</column>
+        <column name='fecha_asignacion_precio'>2026-08-19</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0092 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0092</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Bolívar</column>
+        <column name='municipio'>Cartagena</column>
+        <column name='descripcion'>Excavadora Komatsu PC200, año 2014, serial SN5228749. Bodega en Cartagena.</column>
+        <column name='precio'>51000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-15</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0093 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0093</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>VDD332</column>
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Soacha</column>
+        <column name='descripcion'>Mazda 2 2018, 9.000 km, color rojo. Se encuentra en patios de Soacha.</column>
+        <column name='precio'>136500000</column>
+        <column name='fecha_asignacion_precio'>2026-06-18</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0094 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0094</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>CASA</column>
+        <column name='matricula_inmobiliaria'>290-785558</column>
+        <column name='placa' />
+        <column name='departamento'>Risaralda</column>
+        <column name='municipio'>Pereira</column>
+        <column name='descripcion'>Casa de 2 pisos y 277 m² construidos, 5 alcobas. Transversal 94 # 39-33, barrio Campo Alegre, Pereira.</column>
+        <column name='precio'>1415000000</column>
+        <column name='fecha_asignacion_precio'>2026-08-15</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0095 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0095</column>
+        <column name='estado'>EN_TRAMITE_DE_VENTA</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>290-743011</column>
+        <column name='placa' />
+        <column name='departamento'>Risaralda</column>
+        <column name='municipio'>Pereira</column>
+        <column name='descripcion'>Apartamento de 125 m², 2 alcobas, estrato 2. Diagonal 71 # 4-27, barrio San Remo, Pereira.</column>
+        <column name='precio'>590000000</column>
+        <column name='fecha_asignacion_precio'>2026-09-12</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0096 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0096</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>MAQUINARIA</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa' />
+        <column name='departamento'>Antioquia</column>
+        <column name='municipio'>Medellín</column>
+        <column name='descripcion'>Compactador Dynapac CA250, año 2021, serial SN6459827. Bodega en Medellín.</column>
+        <column name='precio'>129000000</column>
+        <column name='fecha_asignacion_precio'>2026-07-29</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0097 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0097</column>
+        <column name='estado'>DISPONIBLE</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>UNG731</column>
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Hyundai Accent 2014, 93.000 km, color plata. Se encuentra en patios de Barranquilla.</column>
+        <column name='precio'>98500000</column>
+        <column name='fecha_asignacion_precio'>2026-10-17</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0098 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0098</column>
+        <column name='estado'>PENDIENTE_TECNICO</column>
+        <column name='tipo_brp'>VEHICULO</column>
+        <column name='matricula_inmobiliaria' />
+        <column name='placa'>RHF620</column>
+        <column name='departamento'>Cundinamarca</column>
+        <column name='municipio'>Chía</column>
+        <column name='descripcion'>Renault Duster 2018, 75.000 km, color negro. Se encuentra en patios de Chía.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0099 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0099</column>
+        <column name='estado'>SIN_PRECIO</column>
+        <column name='tipo_brp'>LOCAL</column>
+        <column name='matricula_inmobiliaria'>040-898904</column>
+        <column name='placa' />
+        <column name='departamento'>Atlántico</column>
+        <column name='municipio'>Barranquilla</column>
+        <column name='descripcion'>Local comercial de 34 m² con frente sobre vía principal. Diagonal 106 # 26-39, barrio La Floresta, Barranquilla.</column>
+        <column name='precio' />
+        <column name='fecha_asignacion_precio' />
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+    <!-- BRP-0100 -->
+    <insert tableName='brp'>
+        <column name='codigo'>BRP-0100</column>
+        <column name='estado'>SANEAMIENTO</column>
+        <column name='tipo_brp'>APARTAMENTO</column>
+        <column name='matricula_inmobiliaria'>300-783743</column>
+        <column name='placa' />
+        <column name='departamento'>Santander</column>
+        <column name='municipio'>Bucaramanga</column>
+        <column name='descripcion'>Apartamento de 77 m², 4 alcobas, estrato 5. Transversal 88 # 8-79, barrio Villa Verde, Bucaramanga.</column>
+        <column name='precio'>280000000</column>
+        <column name='fecha_asignacion_precio'>2026-10-10</column>
+        <column name='anio_ingesta'>2026</column>
+        <column name='mes_ingesta'>11</column>
+        <column name='dia_ingesta'>17</column>
+    </insert>
+</changeSet>
+
+</databaseChangeLog>

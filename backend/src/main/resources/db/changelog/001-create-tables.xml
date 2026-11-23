@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!-- Tabla BRP (catálogo de bienes) -->
+    <changeSet id="001-1" author="brp">
+        <createTable tableName="brp">
+            <column name="codigo" type="VARCHAR(50)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="estado" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tipo_brp" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="matricula_inmobiliaria" type="VARCHAR(50)"/>
+            <column name="placa" type="VARCHAR(20)"/>
+            <column name="departamento" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="municipio" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="descripcion" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="precio" type="DECIMAL(15,2)"/>
+            <column name="fecha_asignacion_precio" type="DATE"/>
+            <column name="anio_ingesta" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="mes_ingesta" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dia_ingesta" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ultima_actualizacion" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+    <!-- Tabla Usuario -->
+    <changeSet id="001-2" author="brp">
+        <createTable tableName="usuario">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="username" type="VARCHAR(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nombre" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="apellido" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="activo" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rol" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="TIMESTAMP"/>
+            <column name="updated_at" type="TIMESTAMP"/>
+            <column name="created_by" type="BIGINT"/>
+            <column name="updated_by" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+
+    <!-- Tabla Modulo -->
+    <changeSet id="001-3" author="brp">
+        <createTable tableName="modulo">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Tabla Usuario_Modulo -->
+    <changeSet id="001-4" author="brp">
+        <createTable tableName="usuario_modulo">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="usuario_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modulo_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fecha_asignacion" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="asignado_por" type="BIGINT"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="usuario_modulo"
+                                 baseColumnNames="usuario_id"
+                                 constraintName="fk_usuario_modulo_usuario"
+                                 referencedTableName="usuario"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="usuario_modulo"
+                                 baseColumnNames="modulo_id"
+                                 constraintName="fk_usuario_modulo_modulo"
+                                 referencedTableName="modulo"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="usuario_modulo"
+                                 baseColumnNames="asignado_por"
+                                 constraintName="fk_usuario_modulo_asignado_por"
+                                 referencedTableName="usuario"
+                                 referencedColumnNames="id"/>
+
+        <addUniqueConstraint tableName="usuario_modulo"
+                             columnNames="usuario_id, modulo_id"
+                             constraintName="uk_usuario_modulo"/>
+    </changeSet>
+
+    <!-- Tabla Oferta -->
+    <changeSet id="001-5" author="brp">
+        <createTable tableName="oferta">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="brp_codigo" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="valor_total" type="DECIMAL(15,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="descuento" type="DECIMAL(10,4)"/>
+            <column name="estado" type="VARCHAR(30)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="radicado_por_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="analista_id" type="BIGINT"/>
+            <column name="fecha_creacion" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fecha_modificacion" type="TIMESTAMP"/>
+            <column name="fecha_escalamiento" type="TIMESTAMP"/>
+            <column name="fecha_devolucion" type="TIMESTAMP"/>
+            <column name="motivo_devolucion" type="VARCHAR(1000)"/>
+            <column name="fecha_finalizacion" type="TIMESTAMP"/>
+            <column name="version" type="BIGINT"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="oferta"
+                                 baseColumnNames="brp_codigo"
+                                 constraintName="fk_oferta_brp"
+                                 referencedTableName="brp"
+                                 referencedColumnNames="codigo"/>
+        <addForeignKeyConstraint baseTableName="oferta"
+                                 baseColumnNames="radicado_por_id"
+                                 constraintName="fk_oferta_radicado_por"
+                                 referencedTableName="usuario"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="oferta"
+                                 baseColumnNames="analista_id"
+                                 constraintName="fk_oferta_analista"
+                                 referencedTableName="usuario"
+                                 referencedColumnNames="id"/>
+
+        <addUniqueConstraint tableName="oferta"
+                             columnNames="brp_codigo"
+                             constraintName="uk_oferta_brp"/>
+    </changeSet>
+
+    <!-- Tabla Oferente -->
+    <changeSet id="001-6" author="brp">
+        <createTable tableName="oferente">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="oferta_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tipo_identificacion" type="VARCHAR(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="numero_identificacion" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nombre" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="porcentaje_participacion" type="DECIMAL(5,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="telefono" type="VARCHAR(20)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="oferente"
+                                 baseColumnNames="oferta_id"
+                                 constraintName="fk_oferente_oferta"
+                                 referencedTableName="oferta"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+    </changeSet>
+
+    <!-- Tabla Pago -->
+    <changeSet id="001-7" author="brp">
+        <createTable tableName="pago">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="oferente_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tipo_pago" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fecha" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="valor" type="DECIMAL(15,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="entidad_financiadora" type="VARCHAR(100)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="pago"
+                                 baseColumnNames="oferente_id"
+                                 constraintName="fk_pago_oferente"
+                                 referencedTableName="oferente"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+    </changeSet>
+
+    <!-- Tabla Adjunto -->
+    <changeSet id="001-8" author="brp">
+        <createTable tableName="adjunto">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="oferta_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nombre_archivo" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ruta_local" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fecha_carga" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="descripcion" type="VARCHAR(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="adjunto"
+                                 baseColumnNames="oferta_id"
+                                 constraintName="fk_adjunto_oferta"
+                                 referencedTableName="oferta"
+                                 referencedColumnNames="id"
+                                 onDelete="CASCADE"/>
+    </changeSet>
+
+    <!-- Tabla Auditoria Modulo -->
+    <changeSet id="001-9" author="brp">
+        <createTable tableName="auditoria_modulo">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="usuario_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modulo_nombre" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="accion" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="asignado_por" type="BIGINT"/>
+            <column name="fecha" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="auditoria_modulo"
+                                 baseColumnNames="usuario_id"
+                                 constraintName="fk_auditoria_usuario"
+                                 referencedTableName="usuario"
+                                 referencedColumnNames="id"/>
+
+        <addForeignKeyConstraint baseTableName="auditoria_modulo"
+                                 baseColumnNames="asignado_por"
+                                 constraintName="fk_auditoria_asignado_por"
+                                 referencedTableName="usuario"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>

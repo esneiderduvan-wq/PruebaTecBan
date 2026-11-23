@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+
+    <changeSet id="004-1" author="brp">
+        <!-- Administrador -->
+        <insert tableName="usuario">
+            <column name="username">admin</column>
+            <column name="password">$2a$10$xrCi8EQD/RdqkfEP9w8mWegr5nN/TPFt573u63RXiuaiyF8OgqoGe</column>
+            <column name="nombre">Administrador</column>
+            <column name="apellido">Sistema</column>
+            <column name="email">admin@brp.com</column>
+            <column name="activo">true</column>
+            <column name="rol">ADMINISTRADOR</column>
+            <column name="created_at">now()</column>
+        </insert>
+
+        <!-- Radicador -->
+        <insert tableName="usuario">
+            <column name="username">radicador1</column>
+            <column name="password">$2a$10$xrCi8EQD/RdqkfEP9w8mWegr5nN/TPFt573u63RXiuaiyF8OgqoGe</column>
+            <column name="nombre">Juan</column>
+            <column name="apellido">Radicador</column>
+            <column name="email">radicador1@brp.com</column>
+            <column name="activo">true</column>
+            <column name="rol">RADICADOR</column>
+            <column name="created_at">now()</column>
+        </insert>
+
+        <!-- Analista -->
+        <insert tableName="usuario">
+            <column name="username">analista1</column>
+            <column name="password">$2a$10$xrCi8EQD/RdqkfEP9w8mWegr5nN/TPFt573u63RXiuaiyF8OgqoGe</column>
+            <column name="nombre">María</column>
+            <column name="apellido">Analista</column>
+            <column name="email">analista1@brp.com</column>
+            <column name="activo">true</column>
+            <column name="rol">ANALISTA</column>
+            <column name="created_at">now()</column>
+        </insert>
+
+        <!-- Jefe -->
+        <insert tableName="usuario">
+            <column name="username">jefe1</column>
+            <column name="password">$2a$10$xrCi8EQD/RdqkfEP9w8mWegr5nN/TPFt573u63RXiuaiyF8OgqoGe</column>
+            <column name="nombre">Carlos</column>
+            <column name="apellido">Jefe</column>
+            <column name="email">jefe1@brp.com</column>
+            <column name="activo">true</column>
+            <column name="rol">JEFE</column>
+            <column name="created_at">now()</column>
+        </insert>
+    </changeSet>
+
+    <!-- Asignar módulos al administrador (todos los módulos) -->
+    <changeSet id="004-2" author="brp">
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">1</column>
+            <column name="modulo_id">4</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">1</column>
+            <column name="modulo_id">5</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">1</column>
+            <column name="modulo_id">6</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+    </changeSet>
+
+    <!-- Asignar módulos al radicador (RADICACION, SEGUIMIENTO) -->
+    <changeSet id="004-3" author="brp">
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">2</column>
+            <column name="modulo_id">1</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">2</column>
+            <column name="modulo_id">4</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">2</column>
+            <column name="modulo_id">5</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+    </changeSet>
+
+    <!-- Asignar módulos al analista (ANALISIS, SEGUIMIENTO) -->
+    <changeSet id="004-4" author="brp">
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">3</column>
+            <column name="modulo_id">2</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">3</column>
+            <column name="modulo_id">4</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">3</column>
+            <column name="modulo_id">5</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+    </changeSet>
+
+    <!-- Asignar módulos al jefe (APROBACION, SEGUIMIENTO) -->
+    <changeSet id="004-5" author="brp">
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">4</column>
+            <column name="modulo_id">3</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">4</column>
+            <column name="modulo_id">4</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+        <insert tableName="usuario_modulo">
+            <column name="usuario_id">4</column>
+            <column name="modulo_id">5</column>
+            <column name="fecha_asignacion">now()</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

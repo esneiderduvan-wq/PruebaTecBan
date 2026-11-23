@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: brp-sistema
+  datasource:
+    url: jdbc:postgresql://localhost:5432/brp_db
+    username: brp_user
+    password: brp_password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/master.xml
+
+# Configuración de archivos adjuntos
+app:
+  host: http://localhost:8080
+  adjuntos:
+    ruta: ./backend/src/main/resources/files/adjuntos
+
+# Configuración JWT
+jwt:
+  secret: brp-secret-key-para-jwt-debe-ser-muy-largo-mínimo-256-bits
+  expiration: 28800000  # 8 horas en milisegundos
+
+server:
+  port: 8080

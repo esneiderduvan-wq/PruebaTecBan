@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="002-1" author="brp">
+        <sql>
+            ALTER TABLE brp ADD CONSTRAINT chk_brp_fecha_precio
+            CHECK (
+                (fecha_asignacion_precio IS NULL AND precio IS NULL)
+                OR
+                (fecha_asignacion_precio IS NOT NULL AND precio IS NOT NULL)
+            );
+        </sql>
+    </changeSet>
+
+    <changeSet id="002-2" author="brp">
+        <sql>
+            ALTER TABLE brp ADD CONSTRAINT chk_brp_matricula_placa
+            CHECK (
+                (matricula_inmobiliaria IS NULL AND placa IS NOT NULL)
+                OR
+                (matricula_inmobiliaria IS NOT NULL AND placa IS NULL)
+                OR
+                (matricula_inmobiliaria IS NULL AND placa IS NULL)
+            );
+        </sql>
+    </changeSet>
+
+    <changeSet id="002-3" author="brp">
+        <sql>
+            ALTER TABLE oferente ADD CONSTRAINT chk_oferente_porcentaje
+            CHECK (porcentaje_participacion &gt; 0 AND porcentaje_participacion &lt;= 100);
+        </sql>
+    </changeSet>
+
+    <changeSet id="002-4" author="brp">
+        <sql>
+            ALTER TABLE pago ADD CONSTRAINT chk_pago_valor
+            CHECK (valor &gt; 0);
+        </sql>
+    </changeSet>
+
+    <changeSet id="002-5" author="brp">
+        <sql>
+            ALTER TABLE oferta ADD CONSTRAINT chk_oferta_valor_total
+            CHECK (valor_total &gt; 0);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

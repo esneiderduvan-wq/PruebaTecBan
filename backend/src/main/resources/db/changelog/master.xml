@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <include file="db/changelog/001-create-tables.xml"/>
+    <include file="db/changelog/002-create-checks.xml"/>
+    <include file="db/changelog/003-seed-modules.xml"/>
+    <include file="db/changelog/004-seed-users.xml"/>
+    <!-- <include file="db/changelog/007-seed-brp-complete.xml"/> -->
+    <include file="db/changelog/008-seed-brp-from-csv.xml"/>
+
+</databaseChangeLog>
